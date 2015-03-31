@@ -32,19 +32,21 @@
   color: #777
   font-size: 0.9em
 
-.field__feedback
+.field--error
+  .field__feedback
+    color: var(--base-color-alert, #eb3d41)
 
-  .field--error &
-    color: $color--error
+.field--success
+  .field__feedback
+    color: var(--base-color-success, #23ca5e)
 
-  .field--success &
-    color: $color--success
+.field--notice
+  .field__feedback
+    color: var(--base-color-info, #3d77eb)
 
-  .field--notice &
-    color: $color--notice
-
-  .field--warning &
-    color: $color--warning
+.field--warning
+  .field__feedback
+    color: var(--base-color-warning, #edc54b)
 
 
 //
