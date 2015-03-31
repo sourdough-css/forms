@@ -1,0 +1,32 @@
+{
+  "name": "sourdough-forms",
+  "description": "Sourdough CSS form styles",
+  "version": "0.1.0",
+  "files": [
+    "index.styl",
+    "lib"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "sourdough-grid": "^0.1.0",
+    "sourdough-preprocessor": "^0.4.0",
+    "sourdough-reset": "^0.2.0",
+    "sourdough-typography": "^0.2.1",
+    "sourdough-buttons": "^0.1.0"
+  },
+  "scripts": {
+    "build": "sourdough index.styl build/forms.css",
+    "buildTest": "sourdough test/base.styl test/base.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sourdough-css/forms.git"
+  },
+  "keywords": [
+    "forms",
+    "browser",
+    "css",
+    "sourdough",
+    "style"
+  ]
+}

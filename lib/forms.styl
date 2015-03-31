@@ -1,0 +1,100 @@
+//
+// FIELDS
+// ======
+// These lay out controls, labels and additional elements within the context
+// of a form
+// Based on https://github.com/jackbrewer/stylus-boilerplate by Jack Brewer
+//
+
+.fieldset,
+.field
+  margin-bottom: 1em
+
+.fieldset
+  .field
+    margin-bottom: 0
+
+.field__question
+  display: block
+  margin-bottom: 0.5em
+
+.field__question--inline
+  display: inline-block
+
+  & + .field__question--inline
+    margin-left: 10px
+
+.field__assistance,
+.field__feedback
+  margin-top: 0.5em
+
+.field__assistance
+  color: #777
+  font-size: 0.9em
+
+.field__feedback
+
+  .field--error &
+    color: $color--error
+
+  .field--success &
+    color: $color--success
+
+  .field--notice &
+    color: $color--notice
+
+  .field--warning &
+    color: $color--warning
+
+
+//
+// CONTROLS
+// ========
+// Used to markup and style all form controls: inputs, textareas, selects etc.
+// Based on https://github.com/jackbrewer/stylus-boilerplate by Jack Brewer
+//
+
+:root
+  --form-border-color: #ececec
+  --form-border-color-active: #3d77eb
+  --form-border-width: 1px
+  --form-border-radius: 5px
+
+.control--text, .control--choice
+  display: block
+  width: 100%
+  padding: 0.35em 0.6em
+  border: var(--form-border-width) solid var(--form-border-color)
+  border-radius: var(--form-border-radius)
+  line-height: var(--base-line-height, 24px)
+  font-family: inherit
+  font-size: inherit /* this exists in the typography stylesheet */
+  background-color: transparent
+  &:focus
+    border-color: var(--form-border-color-active)
+    outline: 0
+
+  &:disabled
+    background-color: #ececec
+
+.control--text
+  -webkit-appearance none
+
+.control--choice
+  height: calc(var(--base-line-height, 24px) + 13px)
+
+.control--multilined
+  resize: vertical
+  height: auto
+
+.control--boolean
+  margin-right: 10px
+
+span + .control--boolean
+  margin-right: 0
+  margin-left: 10px
+
+.control--field
+  line-height: 1
+  font-family: inherit
+  font-size: inherit
