@@ -1,10 +1,10 @@
-//
-// FIELDS
-// ======
-// These lay out controls, labels and additional elements within the context
-// of a form
-// Based on https://github.com/jackbrewer/stylus-boilerplate by Jack Brewer
-//
+/*
+  FIELDS
+  ======
+  These lay out controls, labels and additional elements within the context
+  of a form
+  Based on https://github.com/jackbrewer/stylus-boilerplate by Jack Brewer
+ */
 
 .fieldset,
 .field
@@ -17,6 +17,7 @@
 .field__question--inline
   display: inline-block
 
+.field__question--inline
   & + .field__question--inline
     margin-left: 10px
 
@@ -45,12 +46,12 @@
     color: var(--base-color-warning, #edc54b)
 
 
-//
-// CONTROLS
-// ========
-// Used to markup and style all form controls: inputs, textareas, selects etc.
-// Based on https://github.com/jackbrewer/stylus-boilerplate by Jack Brewer
-//
+/*
+  CONTROLS
+  ========
+  Used to markup and style all form controls: inputs, textareas, selects etc.
+  Based on https://github.com/jackbrewer/stylus-boilerplate by Jack Brewer
+  */
 
 :root
   --form-border-color: #ececec
@@ -66,8 +67,10 @@
   border-radius: var(--form-border-radius)
   line-height: var(--base-line-height, 24px)
   font-family: inherit
-  font-size: inherit /* this exists in the typography stylesheet */
+  font-size: inherit
   background-color: transparent
+
+.control--text, .control--choice
   &:focus
     border-color: var(--form-border-color-active)
     outline: 0
@@ -76,7 +79,7 @@
     background-color: #ececec
 
 .control--text
-  -webkit-appearance none
+  -webkit-appearance: none
 
 .control--choice
   height: calc(var(--base-line-height, 24px) + 13px)
